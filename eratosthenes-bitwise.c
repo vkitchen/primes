@@ -15,8 +15,11 @@ void eratosthenes() {
 	SetBit(primes, 0);
 	SetBit(primes, 1);
 
+	for (long i = 4; i <= TOP; i += 2)
+		SetBit(primes, i);
+
 	long end = sqrt(TOP);
-	for (long i = 2; i < end; i++)
+	for (long i = 3; i <= end; i += 2)
 		if (TestBit(primes, i))
 			for (long j = i * i; j <= TOP; j += i)
 				SetBit(primes, j);
