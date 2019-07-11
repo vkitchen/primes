@@ -6,7 +6,7 @@
 
 char primes[TOP];
 
-void eratosthenes() {
+void sieve() {
 	primes[0] = 1;
 	primes[1] = 1;
 
@@ -35,7 +35,7 @@ void print_count() {
 }
 
 int main(int argc, char **argv) {
-	eratosthenes();
+	sieve();
 	print_largest();
 	print_count();
 	return 0;
